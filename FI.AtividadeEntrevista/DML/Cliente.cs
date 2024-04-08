@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System.Collections.Generic;
 
 namespace FI.AtividadeEntrevista.DML
 {
@@ -15,7 +11,7 @@ namespace FI.AtividadeEntrevista.DML
         /// Id
         /// </summary>
         public long Id { get; set; }
-        
+
         /// <summary>
         /// CEP
         /// </summary>
@@ -65,5 +61,10 @@ namespace FI.AtividadeEntrevista.DML
         /// CPF
         /// </summary>
         public string CPF { get; set; }
-    }    
+
+        /// <summary>
+        /// Grava uma lista de benificiários
+        /// </summary>
+        public List<Beneficiarios> ListaBeneficiarios { get; set; }
+    }
 }

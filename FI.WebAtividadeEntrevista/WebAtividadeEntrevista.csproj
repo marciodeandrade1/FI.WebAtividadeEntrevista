@@ -189,7 +189,9 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Models\BeneficiariosModel.cs" />
     <Compile Include="Models\ClienteModel.cs" />
+    <Compile Include="Models\Util.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -269,9 +271,12 @@
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
     <Content Include="Scripts\Clientes\FI.AltClientes.js" />
+    <Content Include="Scripts\Clientes\FI.CriarLinhaBeneficiario.js" />
+    <Content Include="Scripts\Clientes\FI.ListarBeneficiario.js" />
     <Content Include="Scripts\Clientes\FI.ListClientes.js" />
     <Content Include="Scripts\Clientes\FI.Clientes.js" />
     <None Include="Scripts\jquery-3.3.1.intellisense.js" />
+    <Content Include="Scripts\Clientes\FI.VerificacaoCPF.js" />
     <Content Include="Scripts\jquery-3.3.1.js" />
     <Content Include="Scripts\jquery-3.3.1.min.js" />
     <Content Include="Scripts\jquery-3.3.1.slim.js" />
@@ -388,6 +393,10 @@
     <Content Include="Scripts\jtable\themes\metro\red\jtable.css" />
     <Content Include="Scripts\jtable\themes\metro\red\jtable.min.css" />
     <Content Include="Scripts\jtable\themes\metro\red\loading.gif" />
+    <Content Include="Scripts\Mascaras\jquery.mask.js" />
+    <Content Include="Scripts\Mascaras\jquery.mask.min.js" />
+    <Content Include="Scripts\Mascaras\jquery211.min.js" />
+    <Content Include="Scripts\Mascaras\Mascaras.js" />
     <Content Include="Scripts\modernizr-2.6.2.js" />
     <Content Include="Scripts\respond.js" />
     <Content Include="Scripts\respond.min.js" />

@@ -1,6 +1,6 @@
 ﻿namespace WebAtividadeEntrevista.Models
 {
-    public class BeneficiarioModel
+    public class BeneficiariosModel
     {
         /// <summary>
         /// Id
