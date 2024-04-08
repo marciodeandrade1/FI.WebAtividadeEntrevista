@@ -1,0 +1,60 @@
+﻿-- Stored Procedure para consultar beneficiários por Id
+CREATE PROCEDURE FI_SP_ConsBeneficiario
+    @Id BIGINT
+AS
+BEGIN
+    SELECT Id, CPF, Nome, IDCLIENTE, AcaoDoItem
+    FROM Beneficiarios
+    WHERE Id = @Id;
+END;
+GO
+
+-- Stored Procedure para verificar a existência de um CPF de beneficiário para um cliente
+CREATE PROCEDURE FI_SP_VerificaCpfBeneficiario
+    @CPF NVARCHAR(14),
+    @IDCLIENTE BIGINT
+AS
+BEGIN
+    SELECT TOP 1 1
+    FROM Beneficiarios
+    WHERE CPF = @CPF AND IDCLIENTE = @IDCLIENTE;
+END;
+GO
+
+-- Stored Procedure para inserir um novo beneficiário
+CREATE PROCEDURE FI_SP_InserirBeneficiario
+    @CPF NVARCHAR(14),
+    @Nome NVARCHAR(100),
+    @IDCLIENTE BIGINT,
+    @AcaoDoItem NVARCHAR(50)
+AS
+BEGIN
+    INSERT INTO Beneficiarios (CPF, Nome, IDCLIENTE, AcaoDoItem)
+    VALUES (@CPF, @Nome, @IDCLIENTE, @AcaoDoItem);
+END;
+GO
+
+-- Stored Procedure para atualizar um beneficiário existente
+CREATE PROCEDURE FI_SP_AtualizarBeneficiario
+    @Id BIGINT,
+    @CPF NVARCHAR(14),
+    @Nome NVARCHAR(100),
+    @IDCLIENTE BIGINT,
+    @AcaoDoItem NVARCHAR(50)
+AS
+BEGIN
+    UPDATE Beneficiarios
+    SET CPF = @CPF, Nome = @Nome, IDCLIENTE = @IDCLIENTE, AcaoDoItem = @AcaoDoItem
+    WHERE Id = @Id;
+END;
+GO
+
+-- Stored Procedure para excluir um beneficiário
+CREATE PROCEDURE FI_SP_ExcluirBeneficiario
+    @Id BIGINT
+AS
+BEGIN
+    DELETE FROM Beneficiarios
+    WHERE Id = @Id;
+END;
+GO

@@ -84,6 +84,7 @@
     <Content Include="DAL\Beneficiario\Procedures\FI_SP_ConverterBeneficiario.sql" />
     <Content Include="DAL\Beneficiario\Procedures\FI_SP_DelBeneficiario.sql" />
     <Content Include="DAL\Beneficiario\Procedures\FI_SP_IncBeneficiario.sql" />
+    <Content Include="DAL\Beneficiario\Procedures\StoredProcedures.txt" />
     <Content Include="DAL\Clientes\Procedures\ScriptAddCPF.txt" />
   </ItemGroup>
   <ItemGroup>
