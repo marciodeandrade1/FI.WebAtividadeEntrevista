@@ -27,9 +27,6 @@ $(document).ready(function () {
 
                 return ListaBeneficiarios;
             });
-
-
-
             $.ajax({
                 url: urlPost,
                 method: "POST",
@@ -59,13 +56,10 @@ $(document).ready(function () {
                         $("#formCadastro")[0].reset();
                     }
             });
-
         } else {
             $("#erroCPFCliente").slideDown(1000);
             $("#msgCPFCliente").html(msgErro);
-
             checkCpfCliente = false;
-
             $().ready(function () {
                 setTimeout(function () {
                     //  $('#erroCPF').hide(); 
@@ -74,12 +68,8 @@ $(document).ready(function () {
                 }, 3000); // O valor é representado em milisegundos.
             });
         }
-
     })
-
 })
-
-
 
 function ModalDialog(titulo, texto) {
     var random = Math.random().toString().replace('.', '');
